@@ -16,5 +16,11 @@ export class CategoriaService {
 
   funGuardar (registro:any){
     return this.http.post(`${this.baseUrl}/categoria`,registro)
-  }
+  } 
+  funmodificar (id:number, registro:any){
+    return this.http.patch(`${this,this.baseUrl}/categoria/${id}`,registro)
+}
+funeliminar(id:number){
+return this.http.delete(`${this,this.baseUrl}/categoria/${id}`)
+}
 }
